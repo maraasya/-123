@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INK ART TATTOO — премиальный тату-салон</title>
+  <meta name="description" content="INK ART TATTOO — тату-салон премиум-класса. Минимализм, реализм, blackwork, fine line, перекрытие старых татуировок и авторские эскизы. Запишитесь на сеанс онлайн.">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== SVG-спрайт иконок ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></symbol>
+  </svg>
+
+  <!-- ===== ШАПКА САЙТА ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="INK ART TATTOO — на главную">
+        <span class="logo__mark">I</span>
+        <span class="logo__text">INK&nbsp;ART <em>TATTOO</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#about" class="nav__link">О салоне</a>
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#styles" class="nav__link">Стили</a>
+        <a href="#gallery" class="nav__link">Галерея</a>
+        <a href="#masters" class="nav__link">Мастера</a>
+        <a href="#prices" class="nav__link">Цены</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+        <a href="#booking" class="btn btn--primary btn--sm nav__cta">Записаться</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 1. ГЛАВНЫЙ ЭКРАН ===== -->
+    <section class="hero" id="home">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__art art" data-art="mandala" data-tone="purple" data-alt="Узор мандалы в стиле blackwork"></div>
+
+      <div class="container hero__content">
+        <p class="eyebrow reveal">Премиальный тату-салон</p>
+        <h1 class="hero__brand reveal">INK ART TATTOO</h1>
+        <h2 class="hero__title reveal">Твоё тело — <span class="gradient-text">твоё искусство</span></h2>
+        <p class="hero__text reveal">Создаём татуировки, которые рассказывают вашу историю: от тонкого минимализма до масштабных авторских работ. Стерильность, честная цена и мастера с портфолио, а не с обещаниями.</p>
+        <div class="hero__actions reveal">
+          <a href="#booking" class="btn btn--primary">Записаться на сеанс <svg class="i"><use href="#i-arrow"/></svg></a>
+          <a href="#gallery" class="btn btn--ghost">Смотреть работы</a>
+        </div>
+
+        <!-- Счётчики статистики (демонстрационные данные) -->
+        <ul class="stats reveal">
+          <li class="stats__item"><span class="stats__num" data-count="12">0</span><span class="stats__label">лет на рынке</span></li>
+          <li class="stats__item"><span class="stats__num" data-count="4800" data-suffix="+">0</span><span class="stats__label">выполненных работ</span></li>
+          <li class="stats__item"><span class="stats__num" data-count="5">0</span><span class="stats__label">мастеров в команде</span></li>
+          <li class="stats__item"><span class="stats__num" data-count="98" data-suffix="%">0</span><span class="stats__label">довольных клиентов</span></li>
+        </ul>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Прокрутить вниз"><span></span></a>
+    </section>
+
+    <!-- ===== 2. О САЛОНЕ ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__text">
+          <p class="eyebrow reveal">О салоне</p>
+          <h2 class="section__title reveal">Мы не набиваем рисунки — <span class="gradient-text">мы создаём образы</span></h2>
+          <p class="reveal">INK ART TATTOO — студия, где татуировка воспринимается как искусство, которое остаётся с человеком навсегда. Поэтому мы не торопимся: обсуждаем идею, подбираем стиль, рисуем эскиз под вашу анатомию и только после согласования приступаем к работе.</p>
+          <p class="reveal"><strong>Наша философия проста:</strong> хорошая татуировка — это точная идея, чистая техника и уважение к клиенту. Никакого конвейера и шаблонных рисунков с каталога.</p>
+
+          <ul class="checks reveal">
+            <li><svg class="i"><use href="#i-check"/></svg> Бесплатная консультация и подбор эскиза</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Одноразовые иглы и барьерная защита на каждом сеансе</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Сертифицированные пигменты, не вызывающие аллергии</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Бесплатная коррекция в течение трёх месяцев</li>
+          </ul>
+        </div>
+
+        <div class="about__cards">
+          <article class="feature reveal">
+            <span class="feature__icon"><svg class="i"><use href="#i-shield"/></svg></span>
+            <h3>Безопасность</h3>
+            <p>Медицинская стерилизация, одноразовые расходники и чистый кабинет, как в клинике.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature__icon"><svg class="i"><use href="#i-pen"/></svg></span>
+            <h3>Индивидуальный подход</h3>
+            <p>Каждый эскиз рисуется с нуля под вашу идею, размер и место на теле.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature__icon"><svg class="i"><use href="#i-heart"/></svg></span>
+            <h3>Комфорт</h3>
+            <p>Спокойная атмосфера, удобные кушетки, чай и музыка на ваш выбор.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature__icon"><svg class="i"><use href="#i-star"/></svg></span>
+            <h3>Честный результат</h3>
+            <p>Показываем заживлённые работы, а не только свежие фото. Качество видно через годы.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. УСЛУГИ ===== -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Услуги</p>
+          <h2 class="section__title reveal">Что мы <span class="gradient-text">делаем</span></h2>
+          <p class="section__sub reveal">Шесть направлений, в которых наши мастера работают на высоком уровне.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="card service reveal">
+            <span class="service__icon"><svg class="i"><use href="#i-drop"/></svg></span>
+            <h3>Минимализм</h3>
+            <p>Небольшие лаконичные символы, надписи и линии. Просто выглядят и долго не теряют чёткость.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="service__icon"><svg class="i"><use href="#i-star"/></svg></span>
+            <h3>Реализм</h3>
+            <p>Портреты, животные и природа с проработкой светотени, объёма и мельчайших деталей.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="service__icon"><svg class="i"><use href="#i-layers"/></svg></span>
+            <h3>Blackwork</h3>
+            <p>Графика из плотного чёрного пигмента: орнаменты, геометрия, крупные контрастные композиции.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="service__icon"><svg class="i"><use href="#i-pen"/></svg></span>
+            <h3>Fine Line</h3>
+            <p>Тончайшая линия иглой в одну-три иглы: ботаника, силуэты, нежные тонкие композиции.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="service__icon"><svg class="i"><use href="#i-zap"/></svg></span>
+            <h3>Перекрытие старых тату</h3>
+            <p>Скроем неудачную или устаревшую работу новым рисунком. Заранее оценим, что получится.</p>
+          </article>
+          <article class="card service reveal">
+            <span class="service__icon"><svg class="i"><use href="#i-heart"/></svg></span>
+            <h3>Индивидуальные эскизы</h3>
+            <p>Нарисуем уникальный рисунок по вашему рассказу. Правки до тех пор, пока вы не скажете «да».</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. СТИЛИ ТАТУИРОВОК ===== -->
+    <section class="section" id="styles">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Стили</p>
+          <h2 class="section__title reveal">Найдите <span class="gradient-text">свой стиль</span></h2>
+          <p class="section__sub reveal">Коротко о популярных направлениях, чтобы вам было проще определиться перед консультацией.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="style-card reveal">
+            <div class="style-card__img art" data-art="moon" data-tone="steel" data-alt="Минималистичная татуировка с луной"></div>
+            <div class="style-card__body">
+              <h3>Минимализм</h3>
+              <p>Простые формы и тонкий контур. Подходит для первой татуировки и скрытых мест.</p>
+              <span class="tag">От 1 часа · небольшой размер</span>
+            </div>
+          </article>
+          <article class="style-card reveal">
+            <div class="style-card__img art" data-art="eye" data-tone="wine" data-alt="Реалистичная татуировка с глазом"></div>
+            <div class="style-card__body">
+              <h3>Реализм</h3>
+              <p>Фотографическая точность, плавные тени и глубина цвета. Требует опытной руки.</p>
+              <span class="tag">От 4 часов · средний и крупный размер</span>
+            </div>
+          </article>
+          <article class="style-card reveal">
+            <div class="style-card__img art" data-art="mandala" data-tone="purple" data-alt="Татуировка в стиле blackwork"></div>
+            <div class="style-card__body">
+              <h3>Blackwork</h3>
+              <p>Контраст, графика и сильный визуальный эффект. Хорошо читается на коже годами.</p>
+              <span class="tag">От 3 часов · любой размер</span>
+            </div>
+          </article>
+          <article class="style-card reveal">
+            <div class="style-card__img art" data-art="branch" data-tone="steel" data-alt="Тонкая ботаническая татуировка fine line"></div>
+            <div class="style-card__body">
+              <h3>Fine Line</h3>
+              <p>Деликатные линии, ботаника и женственные силуэты. Эстетика почти как у карандашного рисунка.</p>
+              <span class="tag">От 1,5 часа · небольшой и средний размер</span>
+            </div>
+          </article>
+          <article class="style-card reveal">
+            <div class="style-card__img art" data-art="rose" data-tone="wine" data-alt="Роза в стиле графики с цветом"></div>
+            <div class="style-card__body">
+              <h3>Графика</h3>
+              <p>Штриховка, гравюра и чёткие контуры. Классика для тех, кто любит выразительный рисунок.</p>
+              <span class="tag">От 2 часов · средний размер</span>
+            </div>
+          </article>
+          <article class="style-card reveal">
+            <div class="style-card__img art" data-art="cover" data-tone="purple" data-alt="Перекрытие старой татуировки"></div>
+            <div class="style-card__body">
+              <h3>Кавер-ап</h3>
+              <p>Новая работа поверх старой. Подбираем композицию так, чтобы скрыть прежний рисунок полностью.</p>
+              <span class="tag">От 3 часов · нужна консультация</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. ГАЛЕРЕЯ РАБОТ ===== -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Галерея</p>
+          <h2 class="section__title reveal">Наши <span class="gradient-text">работы</span></h2>
+          <p class="section__sub reveal">Выберите стиль и нажмите на карточку, чтобы рассмотреть работу крупнее.</p>
+        </header>
+
+        <!-- Кнопки фильтра галереи -->
+        <div class="filters reveal" role="tablist" aria-label="Фильтр галереи по стилям">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
+          <button class="filter" data-filter="minimal" role="tab" aria-selected="false">Минимализм</button>
+          <button class="filter" data-filter="realism" role="tab" aria-selected="false">Реализм</button>
+          <button class="filter" data-filter="blackwork" role="tab" aria-selected="false">Blackwork</button>
+          <button class="filter" data-filter="fineline" role="tab" aria-selected="false">Fine Line</button>
+          <button class="filter" data-filter="cover" role="tab" aria-selected="false">Перекрытие</button>
+        </div>
+
+        <!-- Карточки генерируются в script.js из массива GALLERY -->
+        <div class="gallery" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== 6. МАСТЕРА ===== -->
+    <section class="section" id="masters">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Команда</p>
+          <h2 class="section__title reveal">Наши <span class="gradient-text">мастера</span></h2>
+          <p class="section__sub reveal">Каждый специализируется на своём направлении, поэтому вы получите лучшего исполнителя именно для вашей идеи.</p>
+        </header>
+
+        <div class="grid grid--masters">
+          <article class="master reveal">
+            <div class="master__photo art" data-art="avatar" data-tone="purple" data-label="АВ" data-alt="Артём Волков, мастер реализма"></div>
+            <div class="master__body">
+              <h3>Артём Волков</h3>
+              <p class="master__spec">Реализм, портреты</p>
+              <p class="master__exp">Опыт: 11 лет</p>
+              <button class="btn btn--outline btn--sm" data-book="Артём Волков">Записаться</button>
+            </div>
+          </article>
+          <article class="master reveal">
+            <div class="master__photo art" data-art="avatar" data-tone="wine" data-label="АС" data-alt="Алина Северова, мастер fine line"></div>
+            <div class="master__body">
+              <h3>Алина Северова</h3>
+              <p class="master__spec">Fine Line, ботаника</p>
+              <p class="master__exp">Опыт: 7 лет</p>
+              <button class="btn btn--outline btn--sm" data-book="Алина Северова">Записаться</button>
+            </div>
+          </article>
+          <article class="master reveal">
+            <div class="master__photo art" data-art="avatar" data-tone="steel" data-label="МК" data-alt="Максим Крылов, мастер blackwork"></div>
+            <div class="master__body">
+              <h3>Максим Крылов</h3>
+              <p class="master__spec">Blackwork, орнаменты</p>
+              <p class="master__exp">Опыт: 9 лет</p>
+              <button class="btn btn--outline btn--sm" data-book="Максим Крылов">Записаться</button>
+            </div>
+          </article>
+          <article class="master reveal">
+            <div class="master__photo art" data-art="avatar" data-tone="purple" data-label="ДЛ" data-alt="Дарья Лисицына, мастер минимализма"></div>
+            <div class="master__body">
+              <h3>Дарья Лисицына</h3>
+              <p class="master__spec">Минимализм, надписи</p>
+              <p class="master__exp">Опыт: 5 лет</p>
+              <button class="btn btn--outline btn--sm" data-book="Дарья Лисицына">Записаться</button>
+            </div>
+          </article>
+          <article class="master reveal">
+            <div class="master__photo art" data-art="avatar" data-tone="wine" data-label="ИГ" data-alt="Илья Громов, мастер перекрытий"></div>
+            <div class="master__body">
+              <h3>Илья Громов</h3>
+              <p class="master__spec">Перекрытия, крупные формы</p>
+              <p class="master__exp">Опыт: 12 лет</p>
+              <button class="btn btn--outline btn--sm" data-book="Илья Громов">Записаться</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. ПРАЙС-ЛИСТ ===== -->
+    <section class="section section--alt" id="prices">
+      <div class="container prices">
+        <header class="section__head">
+          <p class="eyebrow reveal">Прайс-лист</p>
+          <h2 class="section__title reveal">Стоимость <span class="gradient-text">услуг</span></h2>
+          <p class="section__sub reveal">Ориентировочные цены. Точную сумму мастер назовёт после обсуждения эскиза.</p>
+        </header>
+
+        <ul class="price-list">
+          <li class="price reveal"><div><h3>Консультация и эскиз-идея</h3><p>Обсуждение, подбор стиля и места</p></div><strong>Бесплатно</strong></li>
+          <li class="price reveal"><div><h3>Минимализм</h3><p>Символ или надпись до 5 см</p></div><strong>от 4 000 ₽</strong></li>
+          <li class="price reveal"><div><h3>Fine Line</h3><p>Тонкая линия, ботаника, силуэты</p></div><strong>от 6 000 ₽</strong></li>
+          <li class="price reveal"><div><h3>Blackwork</h3><p>Орнамент, геометрия, графика</p></div><strong>от 9 000 ₽</strong></li>
+          <li class="price reveal"><div><h3>Перекрытие старой татуировки</h3><p>Зависит от размера и плотности прежней работы</p></div><strong>от 10 000 ₽</strong></li>
+          <li class="price reveal"><div><h3>Реализм</h3><p>Портреты, животные, детальные сюжеты</p></div><strong>от 12 000 ₽</strong></li>
+          <li class="price reveal"><div><h3>Индивидуальный эскиз</h3><p>Рисуется с нуля, учитывается в стоимости сеанса</p></div><strong>от 2 500 ₽</strong></li>
+          <li class="price reveal"><div><h3>Рукав или крупная работа</h3><p>Несколько сеансов, единая композиция</p></div><strong>от 35 000 ₽</strong></li>
+        </ul>
+
+        <p class="note reveal">Цены на странице демонстрационные. Итоговая стоимость зависит от размера, сложности, количества деталей и места нанесения татуировки.</p>
+      </div>
+    </section>
+
+    <!-- ===== 8. ОТЗЫВЫ ===== -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Отзывы</p>
+          <h2 class="section__title reveal">Говорят <span class="gradient-text">клиенты</span></h2>
+          <p class="section__sub reveal">Демонстрационные отзывы. Замените их на реальные после запуска.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="review reveal">
+            <div class="stars" aria-label="Оценка 5 из 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div>
+            <p>«Пришла с размытой идеей, ушла с эскизом, о котором мечтала. Алина тонко поймала настроение, а татуировка зажила идеально.»</p>
+            <footer><span class="avatar">АК</span><div><strong>Анастасия К.</strong><small>Fine Line</small></div></footer>
+          </article>
+          <article class="review reveal">
+            <div class="stars" aria-label="Оценка 5 из 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div>
+            <p>«Илья перекрыл мою старую татуировку, которой я стеснялся десять лет. Теперь на её месте работа, которую показываю с гордостью.»</p>
+            <footer><span class="avatar">ДР</span><div><strong>Дмитрий Р.</strong><small>Перекрытие</small></div></footer>
+          </article>
+          <article class="review reveal">
+            <div class="stars" aria-label="Оценка 5 из 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div>
+            <p>«Первая татуировка, и я очень переживала. Дарья всё объяснила, объяснила уход, и сеанс прошёл спокойно. Рекомендую новичкам.»</p>
+            <footer><span class="avatar">ЕМ</span><div><strong>Екатерина М.</strong><small>Минимализм</small></div></footer>
+          </article>
+          <article class="review reveal">
+            <div class="stars" aria-label="Оценка 5 из 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div>
+            <p>«Максим сделал орнамент на плече: чёткий чёрный, ровные линии. Через год выглядит так же, как в день сеанса.»</p>
+            <footer><span class="avatar">СВ</span><div><strong>Сергей В.</strong><small>Blackwork</small></div></footer>
+          </article>
+          <article class="review reveal">
+            <div class="stars" aria-label="Оценка 5 из 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg></div>
+            <p>«Портрет собаки в реализме: Артём передал даже взгляд. Люди думают, что это фотография. Спасибо за настоящий труд.»</p>
+            <footer><span class="avatar">МЛ</span><div><strong>Мария Л.</strong><small>Реализм</small></div></footer>
+          </article>
+          <article class="review reveal">
+            <div class="stars" aria-label="Оценка 4 из 5"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-star"/></svg><svg class="i star--off"><use href="#i-star"/></svg></div>
+            <p>«Всё понравилось: чисто, вежливо, без навязывания. Пришлось немного подождать начала, но результат того стоил.»</p>
+            <footer><span class="avatar">НТ</span><div><strong>Никита Т.</strong><small>Графика</small></div></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. ФОРМА ЗАПИСИ ===== -->
+    <section class="section section--alt" id="booking">
+      <div class="container booking">
+        <div class="booking__info">
+          <p class="eyebrow reveal">Запись</p>
+          <h2 class="section__title reveal">Запишитесь <span class="gradient-text">на сеанс</span></h2>
+          <p class="reveal">Оставьте заявку, и администратор свяжется с вами в течение рабочего дня, уточнит детали и подберёт удобное время.</p>
+          <ul class="checks reveal">
+            <li><svg class="i"><use href="#i-check"/></svg> Консультация бесплатная</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Предоплата вносится только после согласования эскиза</li>
+            <li><svg class="i"><use href="#i-check"/></svg> Перенос сеанса возможен за 24 часа</li>
+          </ul>
+        </div>
+
+        <!--
+          Для реальной отправки заявок подключите сервис обработки форм
+          (например, Formspree, Web3Forms или Getform) и укажите адрес в CONFIG.formEndpoint в script.js.
+        -->
+        <form class="form reveal" id="booking-form" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+              <span class="field__error" data-error-for="name"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" name="phone" placeholder="+7 900 000-00-00" autocomplete="tel" required>
+              <span class="field__error" data-error-for="phone"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+            <span class="field__error" data-error-for="email"></span>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="master">Мастер</label>
+              <select id="master" name="master" required>
+                <option value="">Выберите мастера</option>
+                <option>Любой свободный мастер</option>
+                <option>Артём Волков</option>
+                <option>Алина Северова</option>
+                <option>Максим Крылов</option>
+                <option>Дарья Лисицына</option>
+                <option>Илья Громов</option>
+              </select>
+              <span class="field__error" data-error-for="master"></span>
+            </div>
+            <div class="field">
+              <label for="style">Стиль татуировки</label>
+              <select id="style" name="style" required>
+                <option value="">Выберите стиль</option>
+                <option>Минимализм</option>
+                <option>Реализм</option>
+                <option>Blackwork</option>
+                <option>Fine Line</option>
+                <option>Перекрытие старой татуировки</option>
+                <option>Индивидуальный эскиз</option>
+                <option>Пока не знаю, нужна консультация</option>
+              </select>
+              <span class="field__error" data-error-for="style"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="date">Желаемая дата</label>
+            <input type="date" id="date" name="date" required>
+            <span class="field__error" data-error-for="date"></span>
+          </div>
+
+          <div class="field">
+            <label for="comment">Комментарий <small>(необязательно)</small></label>
+            <textarea id="comment" name="comment" rows="3" placeholder="Расскажите об идее, размере и месте на теле"></textarea>
+          </div>
+
+          <!-- Скрытое поле-ловушка для спам-ботов -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="honeypot" aria-hidden="true">
+
+          <label class="check">
+            <input type="checkbox" id="agree" name="agree" required>
+            <span>Я согласен(на) на обработку персональных данных</span>
+          </label>
+          <span class="field__error" data-error-for="agree"></span>
+
+          <button type="submit" class="btn btn--primary btn--block" id="submit-btn">Записаться на сеанс</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== 10. КОНТАКТЫ ===== -->
+    <section class="section" id="contacts">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Контакты</p>
+          <h2 class="section__title reveal">Как нас <span class="gradient-text">найти</span></h2>
+        </header>
+
+        <div class="grid grid--4">
+          <article class="contact reveal">
+            <span class="contact__icon"><svg class="i"><use href="#i-pin"/></svg></span>
+            <h3>Адрес</h3>
+            <p>г. Москва, ул. Арбат, д. 24, 2 этаж</p>
+          </article>
+          <article class="contact reveal">
+            <span class="contact__icon"><svg class="i"><use href="#i-phone"/></svg></span>
+            <h3>Телефон</h3>
+            <p><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+          </article>
+          <article class="contact reveal">
+            <span class="contact__icon"><svg class="i"><use href="#i-mail"/></svg></span>
+            <h3>Почта</h3>
+            <p><a href="mailto:info@inkart-tattoo.ru">info@inkart-tattoo.ru</a></p>
+          </article>
+          <article class="contact reveal">
+            <span class="contact__icon"><svg class="i"><use href="#i-clock"/></svg></span>
+            <h3>График работы</h3>
+            <p>Пн–Сб: 11:00–21:00<br>Вс: по записи</p>
+          </article>
+        </div>
+
+        <div class="socials reveal">
+          <a href="#" class="social" aria-label="Instagram"><svg class="i"><use href="#i-insta"/></svg> Instagram</a>
+          <a href="#" class="social" aria-label="Telegram"><svg class="i"><use href="#i-send"/></svg> Telegram</a>
+          <a href="#" class="social" aria-label="ВКонтакте"><span class="vk">VK</span> ВКонтакте</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 11. ПОДВАЛ ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="logo"><span class="logo__mark">I</span><span class="logo__text">INK&nbsp;ART <em>TATTOO</em></span></a>
+        <p>Твоё тело — твоё искусство. Премиальный тату-салон с мастерами, которым доверяют.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="#about">О салоне</a>
+        <a href="#services">Услуги</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#masters">Мастера</a>
+        <a href="#prices">Цены</a>
+        <a href="#booking">Запись</a>
+      </nav>
+      <div class="footer__contacts">
+        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <a href="mailto:info@inkart-tattoo.ru">info@inkart-tattoo.ru</a>
+        <span>г. Москва, ул. Арбат, д. 24</span>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> INK ART TATTOO. Все права защищены.</p>
+      <p>Услуги предоставляются лицам старше 18 лет.</p>
+    </div>
+  </footer>
+
+  <!-- ===== МОДАЛЬНОЕ ОКНО ГАЛЕРЕИ ===== -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Просмотр работы">
+    <div class="modal__backdrop" data-close></div>
+    <figure class="modal__box">
+      <button class="modal__close" data-close aria-label="Закрыть"><svg class="i"><use href="#i-close"/></svg></button>
+      <button class="modal__nav modal__nav--prev" id="modal-prev" aria-label="Предыдущая работа"><svg class="i"><use href="#i-left"/></svg></button>
+      <button class="modal__nav modal__nav--next" id="modal-next" aria-label="Следующая работа"><svg class="i"><use href="#i-right"/></svg></button>
+      <img id="modal-img" src="" alt="">
+      <figcaption>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- ===== УВЕДОМЛЕНИЕ ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
